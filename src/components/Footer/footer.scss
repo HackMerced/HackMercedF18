@@ -8,32 +8,36 @@
     justify-content: left;
     font-size: 45px;
     padding-bottom: 30px;
-    padding-right: 1300px;
     text-align: left;
 
     /* Small devices (iphones, 350px and up) */
     @media only screen and (min-width: 350px) {
         padding-bottom: 60px;
+        padding-right: 130px;
     }
 
     /* Medium devices (landscape tablets, 600px and up) */
     @media only screen and (min-width: 600px) {
         padding-bottom: 5px;
+        padding-right: 500px;
     }
 
     /* Medium devices (landscape tablets, 700px and up) */
     @media only screen and (min-width: 700px) {
         padding-bottom: 5px;
+        padding-right: 600px;
     }
 
     /* Large devices (laptops/desktops, 992px and up) */
     @media only screen and (min-width: 992px) {
         padding-bottom: 10px;
+        padding-right: 750px;
     }
 
     /* Extra large devices (large laptops and desktops, 1200px and up) */
     @media only screen and (min-width: 1200px) {
         padding-bottom: 30px;
+        padding-right: 1300px;
     }
 
     .HackMerced {
