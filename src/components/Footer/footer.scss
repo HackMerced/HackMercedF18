@@ -8,6 +8,7 @@
     justify-content: left;
     font-size: 45px;
     padding-bottom: 30px;
+    padding-right: 1300px;
     text-align: left;
 
     /* Small devices (iphones, 350px and up) */
@@ -109,13 +110,11 @@
     }
 
     .Footer-navbar {
-        //text-align: right;
-        //float: right;
         font-size: 17px;
         position: relative;
         left: 750px;
         top: -29px;
-        //padding-bottom: 30px;
+
         /* Small devices (iphones, 350px and up) */
         @media only screen and (min-width: 350px) {
             font-size: 12px;
@@ -206,12 +205,9 @@
     }
 
     .credits {
-        //align-items: center;
         display: flex;
         position: relative;
         font-size: 16px;
-        // right: 120px;
-        //top: 2660px;
         text-align: center;
 
         /* Small devices (iphones, 350px and up) */
@@ -253,9 +249,9 @@
         @media only screen and (min-width: 1200px) {
             font-size: 15px;
             display: flex;
-            position: absolute;
-            right: 120px;
-            top: 2660px;
+            position: relative;
+            left: 1080px;
+            top: -120px;
             text-align: center;
         }
 
