@@ -30,7 +30,11 @@ const LoginResetPassword: FC = (): JSX.Element => {
             <section className="reset-page">
                 <div className="center-container">
                     <img className="logo" src={Hackmercedlogo} alt="Logo" />
-                    <h1>Reset Password</h1>
+                    <h1>RESET PASSWORD</h1>
+                    <p>Enter your email. We'll email instructions on how to reset your password.
+                        <br></br>
+                        <b>Need help?</b> Contact us through our <u><a href="https://hackmerced.com/#contact-us">contact page</a></u>.
+                    </p>
                     <form onSubmit={handleSubmit} className="form-container">
                         <input onChange={handleInputChange} className="emailinput" type="email" placeholder="Email" id="email" name="email" />
                         <FontAwesomeIcon icon={faUser} className="blackicon" />

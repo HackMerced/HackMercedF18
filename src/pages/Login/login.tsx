@@ -4,7 +4,7 @@ import { Link, useLocation } from 'react-router-dom';
 import Footer from '../../components/Footer/footer';
 import Navbar from '../../components/NavBar/navbar';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebook, faGithub, faGoogle } from '@fortawesome/free-brands-svg-icons';
+import { faFacebook, faGoogle, faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faKey, faUser } from '@fortawesome/free-solid-svg-icons';
 
 import Hackmercedlogo from '../../assets/images/hackmerced-logo.png';
@@ -12,7 +12,7 @@ import Hackmercedlogo from '../../assets/images/hackmerced-logo.png';
 import './login.scss';
 
 const Login: FC = (): JSX.Element => {
-    const[form, setForm] = useState({email:"", password:""});
+    const [form, setForm] = useState({ email: "", password: "" });
     let { pathname } = useLocation();
 
     const handleInputChange = (
@@ -33,10 +33,11 @@ const Login: FC = (): JSX.Element => {
             <Navbar />
             <main className="login-page">
                 <div className="center-container">
-                    <img className="logo" src={Hackmercedlogo} alt="Logo" height={120} width={120} />
+                    <img className="logo" src={Hackmercedlogo} alt="Logo" />
                     <h1>LOGIN</h1>
 
                     <form onSubmit={handleSubmit}>
+
                         <input onChange={handleInputChange} className="emailinput" type="email" placeholder="Email" id="email" name="email"></input>
                         <FontAwesomeIcon icon={faUser} className="blackicon" />
                         <input onChange={handleInputChange}
@@ -57,8 +58,8 @@ const Login: FC = (): JSX.Element => {
                             </h2>
                             <h2 className="flex-item">
                                 <button type="button">
-                                    <Link to="/login-resetpassword"><u>Create an Account</u></Link>     {/* NEED TO LINK TO SIGN-UP PAGE */}
-                                    {pathname === '/login-resetpassword'}                               {/* THESE ARE PLACEHOLDERS */}
+                                    <Link to="/application"><u>Create an Account</u></Link>     {/* NEED TO LINK TO SIGN-UP PAGE */}
+                                    {pathname === '/application'}                               {/* THESE ARE PLACEHOLDERS */}
                                 </button>
                             </h2>
                         </div>
@@ -66,12 +67,22 @@ const Login: FC = (): JSX.Element => {
                         <input className="submitbutton" type="submit" value="LOG IN"></input>
                     </form>
 
-                    <div className="loginicons">
-                        <p>Or login with</p>
-                        <FontAwesomeIcon icon={faFacebook} className="facebookicon" />
-                        <FontAwesomeIcon icon={faGoogle} className="googleicon" />
-                        <FontAwesomeIcon icon={faGithub} className="githubicon" />
+                    <p>Or log in with</p>
+                    <div className="auth-flex-container">
+                        <button type="button">
+                            <Link to="/login-resetpassword"><FontAwesomeIcon icon={faFacebook} className="facebookicon" /></Link>
+                            {pathname === '/login-resetpassword'}     {/* NEED TO LINK TO AUTH LINK */}
+                        </button>
+                        <button type="button">
+                            <Link to="/login-resetpassword"><FontAwesomeIcon icon={faGoogle} className="googleicon" /></Link>
+                            {pathname === '/login-resetpassword'}     {/* NEED TO LINK TO AUTH LINK */}
+                        </button>
+                        <button type="button">
+                            <Link to="/login-resetpassword"><FontAwesomeIcon icon={faGithub} className="githubicon" /></Link>
+                            {pathname === '/login-resetpassword'}     {/* NEED TO LINK TO AUTH LINK */}
+                        </button>
                     </div>
+
                 </div>
             </main>
             <Footer />
